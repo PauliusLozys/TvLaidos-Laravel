@@ -4,8 +4,12 @@
     <img src="images/durga.jpg" style="width: 900px; height: 250px;">
 @endsection
 
+@section('active-kontaktai')
+    class="active"
+@endsection
+
 @section('contentRightParams')
-    class="glowing"
+    id="glowing"
 @endsection
 
 @section('content')

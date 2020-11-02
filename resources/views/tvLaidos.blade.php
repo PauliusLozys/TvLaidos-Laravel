@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('active-tv')
+    class="active"
+@endsection
+
 @section('content')
     <table width="100%">
         <thead>

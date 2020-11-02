@@ -5,8 +5,14 @@
         <img src="images/ubuntu.jpg"  alt="Bill Gates Supports Ubuntu" style="width: 900px; height: 250px;">
     </a>
 @endsection
+
+@section('active-apie')
+    class="active"
+@endsection
+
+
 @section('contentRightParams')
-    class="apie"
+    id="apie"
 @endsection
 @section('content')
     <h1 style="margin-left: 10%; margin-top: 1px">Šį puslapį sukūrė: Paulius Ložys  :^)</h1>

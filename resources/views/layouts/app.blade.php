@@ -26,7 +26,7 @@
                 console.log(this);
             });
             $('#topMenu a').mouseout(function() {
-                $(this).css( { color: "#5725da" });
+                $(this).css( { color: "#ffffff" });
                 console.log(this);
             });
         });
@@ -49,21 +49,21 @@
     <div id="content">
         <div id="topMenu">
             <ul>
-                <li><a href="{{ url('/') }}" title="Apie mus" class="active">Apie mus</a></li>
-                <li><a href="{{url('Kontaktai')}}" title="Kontaktai">Kontaktai</a></li>
+                <li><a href="{{ url('/') }}" title="Apie mus" @yield('active-apie')>Apie mus</a></li>
+                <li><a href="{{url('Kontaktai')}}" title="Kontaktai" @yield('active-kontaktai')>Kontaktai</a></li>
             </ul>
         </div>
         <div id="contentLeft">
-            <h2>Sekcija</h2>
+            <h2 style="color: #c99ce5">Sekcija</h2>
             <ul>
-                <li><a href="{{url('TvLaidos')}}">Tv Laidos</a></li>
-                <li><a href="{{url('Sezonai')}}">Sezonai</a></li>
-                <li><a href="{{url('Aktoriai')}}">Aktoriai</a></li>
-                <li><a href="{{url('Veikejai')}}">Veikėjai</a></li>
-                <li><a href="{{url('Kurejai')}}">Kūrėjai</a></li>
+                <li><a href="{{url('TvLaidos')}}" @yield('active-tv')>Tv Laidos</a></li>
+                <li><a href="{{url('Sezonai')}}"  @yield('active-sez')>Sezonai</a></li>
+                <li><a href="{{url('Aktoriai')}}" @yield('active-akt')>Aktoriai</a></li>
+                <li><a href="{{url('Veikejai')}}" @yield('active-veik')>Veikėjai</a></li>
+                <li><a href="{{url('Kurejai')}}"  @yield('active-kur')>Kūrėjai</a></li>
             </ul>
         </div>
-        <div id="contentRight" @yield('contentRightParams')>
+        <div class="contentRight" @yield('contentRightParams')>
             @yield('content')
         </div>
 

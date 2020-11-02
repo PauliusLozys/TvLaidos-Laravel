@@ -9,16 +9,17 @@ body {
     color: #8A8985; /* teksto spalva */
     font-family: Arial, Helvetica, sans-serif; /* šriftas */
     font-size: 16px; /* teksto dydis */
-    background-color: #dad9d4;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(39,82,112,0.9752101524203431) 35%, rgba(0,212,255,1) 100%);
 }
 
 a {
-    color: #5725da;
+    color: #fafafa;
     font-size: large;
 }
 
 #footerText{
-    color: #E3564F;
+    color: #3fef33;
+    margin-top: 10px;
     font-family: sans-serif;
     font-size: larger;
 }
@@ -48,10 +49,12 @@ a {
 /* turinio blokelis */
 #content {
     width: 900px;
-    background-color: #aaddb6;
+    background-color: #00ddb6;
     border-left: 1px solid silver;
     border-right: 1px solid silver;
     float: left;
+    /*background: rgba(197, 226, 163, 0.6)*/
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(4,3,0,1) 100%);
 }
 
 /* pagrindinio meniu blokelis */
@@ -60,7 +63,9 @@ a {
     height: 40px;
     border-bottom: 1px solid silver;
     float: left;
-    background-color: antiquewhite;
+    /*background-color: #faebd7;*/
+    /*background: rgba(255,235,215,0.9)*/
+    background: linear-gradient(7deg, rgba(2,0,36,1) 0%, rgba(39,112,85,0.9752101524203431) 38%, rgba(0,212,255,1) 100%);
 }
 
 #topMenu li {
@@ -115,10 +120,10 @@ a {
 
 
 /* turinio blokelis */
-#contentRight {
+.contentRight {
     width: 749px;
-    background-color: beige;
-
+    background-color: #f5f5dc;
+    background: rgba(245,245,220,0.7);
     min-height: 470px; /* minimalus blokelio aukštis */
     border-left: 1px solid silver;
     float: left; /* blokelio pozicija */
@@ -158,13 +163,14 @@ h2#pageTitle {
     height: 40px;
     border: 1px solid silver;
     float: left;
-    background-color: #6E6E6E;
+    /*background-color: #6E6E6E;*/
+    background: linear-gradient(176deg, rgba(2,0,36,1) 0%, rgba(57,39,112,0.6474790599833684) 61%, rgba(0,212,255,1) 100%);
     color: #fff;
 }
 /* nustatomas flex konteineris su juodu fonu */
 .flex-container {
     display: flex;
-    background-color: #000000;
+    background: linear-gradient(167deg, rgba(2,0,36,1) 0%, rgba(39,112,85,0.9752101524203431) 38%, rgba(0,212,255,1) 100%);
 }
 
 /* nustatomas logotipo pozicija */
@@ -178,25 +184,16 @@ h2#pageTitle {
     width: 100px
 }
 
-.think {
-    background-image: url('images/head\ full\ of\ thoughts.jpg');
-    background-repeat: no-repeat;
-    background-size: 749px 480px;
-    object-fit: contain;
-}
-
-.glowing {
+#glowing {
     color: #fff;
     background-image: url('CSSimages/cia.png');
-    background-color: #000000;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0px;
 }
 
-.apie {
+#apie {
     background-image: url('CSSimages/dontunderstand.jpg');
-    background-color: #000000;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0px;

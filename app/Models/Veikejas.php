@@ -9,6 +9,6 @@ class Veikejas extends Model
 {
     use HasFactory;
     protected $table = 'veikejas';
-    protected $fillable = ['vardas','id_VEIKEJAS','fk_TV_LAIDAid_TV_LAIDA'];
+    protected $fillable = ['vardas','id_VEIKEJAS','fk_TV_LAIDAid_TV_LAIDA', 'fk_AKTORIUSid_AKTORIUS'];
     public $timestamps = false;
 }

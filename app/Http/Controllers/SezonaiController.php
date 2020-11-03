@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Sezonas;
-use App\Models\TvLaida;
 use Illuminate\Http\Request;
 
 class SezonaiController extends Controller

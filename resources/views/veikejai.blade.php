@@ -11,6 +11,7 @@
             <th>ID</th>
             <th>Vardas</th>
             <th>Tv Laida</th>
+            <th>Aktorius</th>
         </tr>
         </thead>
 
@@ -20,7 +21,8 @@
             <tr>
                 <td colspan="">{{$data->id_VEIKEJAS }}</td>
                 <td>{{$data->vardas}}</td>
-                <td>{{$data->fk_TV_LAIDAid_TV_LAIDA }}</td>
+                <td>{{$data->fk_TV_LAIDAid_TV_LAIDA}}</td>
+                <td>{{$data->fk_AKTORIUSid_AKTORIUS}}</td>
             </tr>
         @endforeach
         </tbody>

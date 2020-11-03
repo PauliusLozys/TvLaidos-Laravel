@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class SezonaiController extends Controller
 {
-    public function getSezonai() {
+    public function index() {
         $all_sezonai = Sezonas::all();
         return view('sezonai', compact('all_sezonai'));
     }

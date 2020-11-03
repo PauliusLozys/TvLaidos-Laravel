@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class KurejaiController extends Controller
 {
-    public function getKurejai() {
+    public function index() {
         $all_kurejai = Kurejas::all();
         return view('kurejai', compact('all_kurejai'));
     }

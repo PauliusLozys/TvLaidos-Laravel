@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class AktoriaiController extends Controller
 {
-    public function getAktoriai() {
+    public function index() {
         $all_aktoriai = Aktorius::all();
         return view('aktoriai', compact('all_aktoriai'));
     }

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class VeikejaiController extends Controller
 {
-    public function getVeikejai() {
+    public function index() {
         $all_veikejai = Veikejas::all();
         return view('veikejai', compact('all_veikejai'));
     }

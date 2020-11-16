@@ -42,8 +42,22 @@ a {
 
 #slogan {
     margin: 15px 0px 0px 15px;
-    color: darkgoldenrod;
+    /* color: darkgoldenrod; */
     font-size: 36px;
+
+    animation: colorful 10s linear infinite;
+}
+
+@keyframes colorful
+{
+    0%   {color: red;}
+    14% {color: orange;}
+    28% {color: yellow;}
+    42% {color: green;}
+    60% {color: blue;}
+    74% {color: indigo;}
+    88%  {color: violet;}
+    100%  {color: red;}
 }
 
 
@@ -124,7 +138,11 @@ a {
 .contentRight {
     width: 749px;
     background-color: #f5f5dc;
-    background: rgba(245,245,220,0.7);
+    background-image: url('CSSimages/luke\ smith\ dancing.gif');
+    background-size: 70%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    /* background: rgba(245,245,220,0.7); */
     min-height: 470px; /* minimalus blokelio aukštis */
     border-left: 1px solid silver;
     float: left; /* blokelio pozicija */
@@ -196,8 +214,17 @@ h2#pageTitle {
 #apie {
     background-image: url('CSSimages/dontunderstand.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     background-position: 0px;
+
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate
+{
+    0%   {transform: rotate(0deg);}
+    50% {transform: rotate(360deg);}
+    100%  {transform: rotate(0deg);}
 }
 
 div {

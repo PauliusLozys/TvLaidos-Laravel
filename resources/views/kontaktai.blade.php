@@ -18,3 +18,7 @@
     <p>Telefonas: <b style="font-size: 36px;">TRY</b> </p>
     <p>El pašto adresas: <b style="font-size: 36px;">FBI</b> </p>
 @endsection
+
+@section('footer')
+Prisijungta: {{ date('Y-m-d H:i:s', session('time')) }} 
+@endsection

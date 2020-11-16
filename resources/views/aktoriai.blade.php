@@ -28,8 +28,12 @@
         @endforeach
         </tbody>
     </table>
-    
+
     <div style="float: right;">
         {{$all_aktoriai->links('vendor.pagination.simple-tailwind')}}
     </div>
+@endsection
+
+@section('footer')
+    Prisijungta: {{ date('Y-m-d H:i:s', session('time')) }} 
 @endsection

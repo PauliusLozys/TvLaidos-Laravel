@@ -30,3 +30,7 @@
     </table>
 
 @endsection
+
+@section('footer')
+Prisijungta: {{ date('Y-m-d H:i:s', session('time')) }} 
+@endsection

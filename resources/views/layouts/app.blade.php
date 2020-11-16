@@ -70,7 +70,7 @@
     </div>
     <div id="footer">
         <p id="footerText">
-            This is a very nice peace of text :^)
+           @yield('footer')
         </p>
 
     </div>

@@ -14,6 +14,11 @@
 @section('contentRightParams')
     id="apie"
 @endsection
+
 @section('content')
     <h1 style="margin-left: 10%; margin-top: 1px">Šį puslapį sukūrė: Paulius Ložys  :^)</h1>
+@endsection
+
+@section('footer')
+Prisijungta: {{ date('Y-m-d H:i:s', session('time')) }} 
 @endsection

@@ -20,6 +20,7 @@ a {
 #footerText{
     color: #3fef33;
     margin-top: 10px;
+    margin-left: 10px;
     font-family: sans-serif;
     font-size: larger;
 }

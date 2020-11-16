@@ -19,10 +19,10 @@
         @foreach($all_veikejai as $data )
 
             <tr>
-                <td colspan="">{{$data->id_VEIKEJAS }}</td>
+                <td colspan="">{{$data->id }}</td>
                 <td>{{$data->vardas}}</td>
-                <td>{{$data->fk_TV_LAIDAid_TV_LAIDA}}</td>
-                <td>{{$data->fk_AKTORIUSid_AKTORIUS}}</td>
+                <td>{{$data->tvLaida->pavadinimas}}</td>
+                <td>{{$data->aktorius->vardas}} {{$data->aktorius->pavarde}}</td>
             </tr>
         @endforeach
         </tbody>

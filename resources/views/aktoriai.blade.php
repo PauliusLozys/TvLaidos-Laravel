@@ -19,10 +19,10 @@
     @foreach($all_aktoriai as $data )
 
         <tr>
-            <td colspan="">{{$data->id_AKTORIUS }}</td>
+            <td colspan="">{{$data->id }}</td>
             <td>{{$data->vardas}}</td>
             <td>{{$data->pavarde}}</td>
-            <td>{{$data->lytis}}</td>
+            <td>{{$data->lytis ? 'Moteris' : 'Vyras'}}</td>
         </tr>
     @endforeach
     </tbody>

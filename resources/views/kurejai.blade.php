@@ -13,6 +13,7 @@
             <th>Pavardė</th>
             <th>Rolė</th>
             <th>Lytis</th>
+            <th>Tv Laida</th>
         </tr>
         </thead>
 
@@ -20,11 +21,12 @@
         @foreach($all_kurejai as $data )
 
             <tr>
-                <td colspan="">{{$data->id_KUREJAS }}</td>
+                <td colspan="">{{$data->id }}</td>
                 <td>{{$data->vardas}}</td>
                 <td>{{$data->pavarde}}</td>
                 <td>{{$data->role}}</td>
-                <td>{{$data->lytis}}</td>
+                <td>{{$data->lytis ? 'Moteris' : 'Vyras'}}</td>
+                <td>{{$data->tvLaida->pavadinimas}}</td>
             </tr>
         @endforeach
         </tbody>

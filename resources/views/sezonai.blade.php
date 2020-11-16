@@ -19,11 +19,11 @@
         <tbody>
         @foreach($all_sezonai as $data )
             <tr>
-                <td colspan="">{{$data->id_SEZONAS}}</td>
+                <td colspan="">{{$data->id}}</td>
                 <td>{{$data->sezono_nr}}</td>
                 <td>{{$data->sezono_ivertinimas}}</td>
                 <td>{{$data->epizodu_sk}}</td>
-                <td>{{$data->fk_TV_LAIDAid_TV_LAIDA}}</td>
+                <td>{{$data->tvLaida->pavadinimas}}</td>
             </tr>
         @endforeach
         </tbody>

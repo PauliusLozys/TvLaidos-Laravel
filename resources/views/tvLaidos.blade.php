@@ -20,7 +20,7 @@
         @foreach($all_tv_laidos as $data )
 
             <tr>
-                <td colspan="">{{$data->id_TV_LAIDA}}</td>
+                <td colspan="">{{$data->id}}</td>
                 <td>{{$data->pavadinimas}}</td>
                 <td>{{$data->trukme}}</td>
                 <td>{{$data->ziurovu_ivertinimas}}</td>

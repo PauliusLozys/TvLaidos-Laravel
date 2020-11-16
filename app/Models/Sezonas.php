@@ -11,4 +11,8 @@ class Sezonas extends Model
     protected $table = 'sezonas';
     protected $fillable = ['sezono_nr','sezono_ivertinimas','epizodu_sk','id_SEZONAS','fk_TV_LAIDAid_TV_LAIDA'];
     public $timestamps = false;
+
+    public function tvLaida() {
+        return $this->belongsTo('App\Models\TvLaida', 'fk_tv_laida');
+    }
 }

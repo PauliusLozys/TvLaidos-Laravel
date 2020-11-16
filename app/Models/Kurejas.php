@@ -9,6 +9,9 @@ class Kurejas extends Model
 {
     use HasFactory;
     protected $table = 'kurejas';
-    protected $fillable = ['vardas','pavarde','role','lytis','id_KUREJAS'];
     public $timestamps = false;
+
+    public function tvLaida() {
+        return $this->belongsTo('App\Models\TvLaida', 'fk_tv_laida');
+    }
 }

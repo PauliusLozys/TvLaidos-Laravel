@@ -23,7 +23,7 @@ class SezonasSeeder extends Seeder
 
         Sezonas::create([
             'sezono_nr' => 2,
-            'sezono_ivertinimas' => 7,
+            'sezono_ivertinimas' => 7.15,
             'epizodu_sk' => 15,
             'fk_tv_laida' => 1
         ]);

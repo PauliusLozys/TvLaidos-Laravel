@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call(VeikejasSeeder::class);
         $this->call(SezonasSeeder::class);
         $this->call(KurejasSeeder::class);
+        $this->call(KuriaSeeder::class);
         // \App\Models\User::factory(10)->create();
     }
 }

@@ -25,9 +25,9 @@ class CreateTvLaidaTable extends Migration
             $table->foreign('fk_tv_laida')->references('id')->on('tv_laida')->onDelete('cascade');
         });
 
-        Schema::table('kurejas', function (Blueprint $table) {
-            $table->foreign('fk_tv_laida')->references('id')->on('tv_laida')->onDelete('cascade');
-        });
+        // Schema::table('kurejas', function (Blueprint $table) {
+        //     $table->foreign('fk_tv_laida')->references('id')->on('tv_laida')->onDelete('cascade');
+        // });
     }
 
     /**

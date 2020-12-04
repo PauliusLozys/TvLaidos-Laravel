@@ -18,48 +18,42 @@ class KurejasSeeder extends Seeder
             'vardas' => 'Mozni',
             'pavarde' => 'Closs',
             'role' => 'Writter',
-            'lytis' => 0,
-            'fk_tv_laida' => 4
+            'lytis' => 0
         ]);
 
         Kurejas::create([
             'vardas' => 'Kuff',
             'pavarde' => 'Bertron',
             'role' => 'Sound designer',
-            'lytis' => 0,
-            'fk_tv_laida' => 3
+            'lytis' => 0
         ]);
 
         Kurejas::create([
             'vardas' => 'Klif',
             'pavarde' => 'Kokuznow',
             'role' => 'Writter',
-            'lytis' => 0,
-            'fk_tv_laida' => 2
+            'lytis' => 0
         ]);
 
         Kurejas::create([
             'vardas' => 'Baz',
             'pavarde' => 'Foz',
             'role' => 'Dialog writer',
-            'lytis' => 0,
-            'fk_tv_laida' => 2
+            'lytis' => 0
         ]);
 
         Kurejas::create([
             'vardas' => 'Marry',
             'pavarde' => 'Gold',
             'role' => 'Writter',
-            'lytis' => 0,
-            'fk_tv_laida' => 1
+            'lytis' => 0
         ]);
 
         Kurejas::create([
             'vardas' => 'Fizz',
             'pavarde' => 'Buzz',
             'role' => 'Interview managment',
-            'lytis' => 1,
-            'fk_tv_laida' => 1
+            'lytis' => 1
         ]);
     }
 }

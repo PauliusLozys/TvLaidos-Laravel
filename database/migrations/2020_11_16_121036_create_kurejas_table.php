@@ -19,7 +19,7 @@ class CreateKurejasTable extends Migration
             $table->string('pavarde');
             $table->string('role');
             $table->boolean('lytis');
-            $table->bigInteger('fk_tv_laida')->unsigned();
+            // $table->bigInteger('fk_tv_laida')->unsigned();
         });
     }
 

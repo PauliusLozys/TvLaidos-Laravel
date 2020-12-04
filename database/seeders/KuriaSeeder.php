@@ -27,6 +27,11 @@ class KuriaSeeder extends Seeder
 
         Kuria::create([
             'fk_tv_laida' => 2,
+            'fk_kurejas' => 2
+        ]);
+
+        Kuria::create([
+            'fk_tv_laida' => 2,
             'fk_kurejas' => 3
         ]);
 

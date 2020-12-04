@@ -26,7 +26,12 @@
                 <td>{{$data->pavarde}}</td>
                 <td>{{$data->role}}</td>
                 <td>{{$data->lytis ? 'Moteris' : 'Vyras'}}</td>
-                <td>{{$data->tvLaida->pavadinimas}}</td>
+                <td>
+                    @foreach($data->tvLaidos as $tv)
+                        {{ $tv->pavadinimas }} <br>
+                    @endforeach
+                </td>
+
             </tr>
         @endforeach
         </tbody>

@@ -11,7 +11,7 @@ class Kurejas extends Model
     protected $table = 'kurejas';
     public $timestamps = false;
 
-    public function tvLaida() {
-        return $this->belongsTo('App\Models\TvLaida', 'fk_tv_laida');
+    public function tvLaidos() {
+        return $this->belongsToMany(TvLaida::class, 'kuria', 'fk_kurejas', 'fk_tv_laida', );
     }
 }

@@ -14,6 +14,7 @@
             <th>Rolė</th>
             <th>Lytis</th>
             <th>Tv Laida</th>
+            <th>Veiksmai</th>
         </tr>
         </thead>
 
@@ -30,6 +31,12 @@
                     @foreach($data->tvLaidos as $tv)
                         {{ $tv->pavadinimas }} <br>
                     @endforeach
+                </td>
+                <td>
+                    <center>
+                        <a href="#"><button>Redaguoti</button></a>
+                        <a href="#"><button>Šalinti</button></a>
+                    </center>
                 </td>
 
             </tr>

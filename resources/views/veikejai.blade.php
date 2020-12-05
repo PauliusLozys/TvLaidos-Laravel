@@ -12,6 +12,7 @@
             <th>Vardas</th>
             <th>Tv Laida</th>
             <th>Aktorius</th>
+            <th>Veiksmai</th>
         </tr>
         </thead>
 
@@ -23,6 +24,12 @@
                 <td>{{$data->vardas}}</td>
                 <td>{{$data->tvLaida->pavadinimas}}</td>
                 <td>{{$data->aktorius->vardas}} {{$data->aktorius->pavarde}}</td>
+                <td>
+                    <center>
+                        <a href="#"><button>Redaguoti</button></a>
+                        <a href="#"><button>Šalinti</button></a>
+                    </center>
+                </td>
             </tr>
         @endforeach
         </tbody>

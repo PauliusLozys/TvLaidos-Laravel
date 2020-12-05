@@ -13,6 +13,8 @@
             <th>Sezono įvertinimas</th>
             <th>Epizodu skaičius</th>
             <th>Tv Laida ID</th>
+            <th>Veiksmai</th>
+
         </tr>
         </thead>
 
@@ -24,6 +26,12 @@
                 <td>{{$data->sezono_ivertinimas}}</td>
                 <td>{{$data->epizodu_sk}}</td>
                 <td>{{$data->tvLaida->pavadinimas}}</td>
+                <td>
+                    <center>
+                        <a href="#"><button>Redaguoti</button></a>
+                        <a href="#"><button>Šalinti</button></a>
+                    </center>
+                </td>
             </tr>
         @endforeach
         </tbody>

@@ -12,6 +12,8 @@
             <th>Vardas</th>
             <th>Pavardė</th>
             <th>Lytis</th>
+            <th>Veiksmai</th>
+
         </tr>
         </thead>
 
@@ -23,6 +25,12 @@
                 <td>{{$data->vardas}}</td>
                 <td>{{$data->pavarde}}</td>
                 <td>{{$data->lytis ? 'Moteris' : 'Vyras'}}</td>
+                <td>
+                    <center>
+                        <a href="#"><button>Redaguoti</button></a>
+                        <a href="#"><button>Šalinti</button></a>
+                    </center>
+                </td>
             </tr>
             
         @endforeach

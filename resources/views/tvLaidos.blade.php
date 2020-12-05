@@ -13,6 +13,7 @@
             <th>Trukmė</th>
             <th>Žiūrovų įvertinimas</th>
             <th>Aprašymas</th>
+            <th>Veiksmai</th>
         </tr>
         </thead>
 
@@ -25,6 +26,12 @@
                 <td>{{$data->trukme}}</td>
                 <td>{{$data->ziurovu_ivertinimas}}</td>
                 <td>{{$data->aprasymas}}</td>
+                <td>
+                    <center>
+                        <a href="#"><button>Redaguoti</button></a>
+                        <a href="#"><button>Šalinti</button></a>
+                    </center>
+                </td>
             </tr>
         @endforeach
         </tbody>

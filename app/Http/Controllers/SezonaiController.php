@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Sezonas;
+use App\Models\TvLaida;
 use Illuminate\Http\Request;
 
 class SezonaiController extends Controller
@@ -13,23 +14,55 @@ class SezonaiController extends Controller
     }
     public function create()
     {
-        // return view('device.add');
+        $tvLaidos = TvLaida::all();
+        return view('create.sezonai', compact('tvLaidos'));
     }
 
     public function store(Request $request)
     {
+        $data = $request->validate([
+            'sezonoNr' => 'required|numeric',
+            'sezonoIvertis' => 'required|between:1,10|numeric',
+            'epizoduNr' => 'required|numeric',
+            'tvLaida' => 'required'
+        ]);
 
-        // return view('device.add')->with('public_access_key', $public_access_key);
+        $sezonas = new Sezonas();
+
+        $sezonas->sezono_nr = $data['sezonoNr'];
+        $sezonas->sezono_ivertinimas = $data['sezonoIvertis'];
+        $sezonas->epizodu_sk = $data['epizoduNr'];
+        $sezonas->fk_tv_laida = $data['tvLaida'];
+
+        $sezonas->save();
+        return Redirect()->route('sezonai');
     }
 
     public function edit($id)
     {
-        // return 'edit page';
+        $sezonas = Sezonas::findOrFail($id);
+        $tvLaidos = TvLaida::all();
+        return view('edit.sezonai', compact('sezonas', 'tvLaidos'));
     }
 
     public function update(Request $request, $id)
     {
+        $data = $request->validate([
+            'sezonoNr' => 'required|numeric',
+            'sezonoIvertis' => 'required|between:1,10|numeric',
+            'epizoduNr' => 'required|numeric',
+            'tvLaida' => 'required'
+        ]);
 
+        $sezonas = Sezonas::findOrFail($id);
+
+        $sezonas->sezono_nr = $data['sezonoNr'];
+        $sezonas->sezono_ivertinimas = $data['sezonoIvertis'];
+        $sezonas->epizodu_sk = $data['epizoduNr'];
+        $sezonas->fk_tv_laida = $data['tvLaida'];
+
+        $sezonas->save();
+        return Redirect()->route('sezonai');
     }
 
     public function destroy($id)

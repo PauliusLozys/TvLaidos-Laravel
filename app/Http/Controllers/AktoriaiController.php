@@ -14,13 +14,25 @@ class AktoriaiController extends Controller
 
     public function create()
     {
-        // return view('device.add');
+        return view('create.aktoriai');
     }
 
     public function store(Request $request)
     {
+        $data = $request->validate([
+            'vardas' => 'required|max:255|alpha',
+            'pavarde' => 'required|max:255|alpha',
+            'lytis' => 'required'
+        ]);
 
-        // return view('device.add')->with('public_access_key', $public_access_key);
+        $aktorius = new Aktorius();
+
+        $aktorius->vardas = $data['vardas'];
+        $aktorius->pavarde = $data['pavarde'];
+        $aktorius->lytis = $data['lytis'];
+
+        $aktorius->save();
+        return Redirect()->route('aktoriai');
     }
 
     public function edit($id)
@@ -31,7 +43,18 @@ class AktoriaiController extends Controller
 
     public function update(Request $request, $id)
     {
+        $data = $request->validate([
+            'vardas' => 'required|max:255|alpha',
+            'pavarde' => 'required|max:255|alpha',
+            'lytis' => 'required'
+        ]);
+        $aktorius = Aktorius::findOrFail($id);
+        $aktorius->vardas = $data['vardas'];
+        $aktorius->pavarde = $data['pavarde'];
+        $aktorius->lytis = $data['lytis'];
 
+        $aktorius->save();
+        return Redirect()->route('aktoriai');
     }
 
     public function destroy($data)

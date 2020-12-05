@@ -49,5 +49,8 @@
 @endsection
 
 @section('footer')
+    <a href="{{ route('aktoriai.create') }}" style="float: right">
+        <button type="button" class="btn btn-primary">Pridėti naują aktorių</button>
+    </a>
     Prisijungta: {{ date('Y-m-d H:i:s', session('time')) }} 
 @endsection

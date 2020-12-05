@@ -28,8 +28,14 @@
                 <td>{{$data->aprasymas}}</td>
                 <td>
                     <center>
-                        <a href="#"><button>Redaguoti</button></a>
-                        <a href="#"><button>Šalinti</button></a>
+                        <a href="{{ route('tvLaidos.edit', $data) }}">
+                            <button type="button" class="btn btn-primary">Redaguoti</button>
+                        </a>
+                        <form action="{{ route('tvLaidos.destroy', $data) }}" method="POST" class="float-left">
+                            @csrf
+                            {{method_field('DELETE')}}
+                            <button type="submit" class="btn btn-warning">Šalinti</button>
+                        </form>
                     </center>
                 </td>
             </tr>
@@ -40,5 +46,8 @@
 @endsection
 
 @section('footer')
-Prisijungta: {{ date('Y-m-d H:i:s', session('time')) }} 
+    <a href="{{ route('tvLaidos.create') }}" style="float: right">
+        <button type="button" class="btn btn-primary">Pridėti nauja TV laida</button>
+    </a>
+    Prisijungta: {{ date('Y-m-d H:i:s', session('time')) }} 
 @endsection

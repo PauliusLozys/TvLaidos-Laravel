@@ -42,7 +42,7 @@
             <h3 id="slogan">IMbD Tv laidų svetainė</h3>
         </div>
         <div id="image">
-            <img id="logoImg" src="images/logo.png">
+            <img id="logoImg" src="/images/logo.png">
         </div>
     </div>
 

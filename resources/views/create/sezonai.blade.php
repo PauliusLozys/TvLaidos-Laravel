@@ -15,31 +15,38 @@
 </div>
 @endif
 
-<center>
-    <form action="{{ route('sezonai.store') }}" method="POST" style="background-color: antiquewhite">
-        @csrf
+<form action="{{ route('sezonai.store') }}" method="POST" class="form">
+    @csrf
+    <div class="inp">
         <label >Sezono numeris: </label>
-        <input type="number" name="sezonoNr" value="{{ old('sezonoNr') }}"> <br><br>
-        
+        <input class="textinput" type="number" name="sezonoNr" value="{{ old('sezonoNr') }}"> <br><br>
+    </div>
+    
+    <div class="inp">
         <label >Sezono įvertinimas: </label>
-        <input type="number" step="0.01" name="sezonoIvertis" value="{{ old('sezonoIvertis') }}"> <br><br>
-
+        <input class="textinput" type="number" step="0.01" name="sezonoIvertis" value="{{ old('sezonoIvertis') }}"> <br><br>
+    </div>
+    
+    <div class="inp">
         <label >Epizodų skaičius: </label>
-        <input type="number" name="epizoduNr" value="{{ old('epizoduNr') }}"> <br><br>
-
+        <input class="textinput" type="number" name="epizoduNr" value="{{ old('epizoduNr') }}"> <br><br>
+    </div>
+    
+    <div class="inp">
+        
         <label >Pasirinkite TV laidą: </label>
-        <select name="tvLaida" id="tvLaida">
-
+        <select class="dropdownlist" name="tvLaida" id="tvLaida">
             @foreach($tvLaidos as $tv)
-                <option value="{{ $tv->id }}" @if(old('tvLaida') == $tv->id) selected="selected" @endif>{{ $tv->pavadinimas }}</option>
+            <option value="{{ $tv->id }}" @if(old('tvLaida') == $tv->id) selected="selected" @endif>{{ $tv->pavadinimas }}</option>
             @endforeach
-
         </select><br><br>
-
-        <input type="submit" value="Pridėti">
+    </div>
+    
+    <center>
+        <input class="submit" type="submit" value="Pridėti">
+    </center>
         
     </form>
-</center>
 
 @endsection
 

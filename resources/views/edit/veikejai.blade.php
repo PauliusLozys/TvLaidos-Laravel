@@ -15,36 +15,37 @@
 </div>
 @endif
 
-<center>
-    <form action="{{ route('veikejai.update', $veikejas) }}" method="POST" style="background-color: antiquewhite">
-        @csrf
-        {{ method_field('PUT') }}
+<form action="{{ route('veikejai.update', $veikejas) }}" method="POST" class="form">
+    @csrf
+    {{ method_field('PUT') }}
+
+    <div class="inp">
         <label >Vardas: </label>
-        <input type="text" name="vardas" value="{{ $veikejas->vardas }}"> <br><br>
-        
-        <label >Pasirinkite TV laidą: </label>
-        <select name="tvLaida" id="tvLaida">
+        <input class="textinput" type="text" name="vardas" value="{{ $veikejas->vardas }}"> <br><br>
+    </div>
+    
 
-            @foreach($tvLaidos as $tv)
-                <option value="{{ $tv->id }}" @if($veikejas->fk_tv_laida == $tv->id) selected="selected" @endif>{{ $tv->pavadinimas }}</option>
-            @endforeach
-
-        </select><br><br>
-
-        <label >Pasirinkite aktorių: </label>
-        <select name="aktorius" id="aktorius">
+    <label id="leb">Pasirinkite TV laidą: </label>
+    <select class="dropdownlist" name="tvLaida" id="tvLaida">  
+        @foreach($tvLaidos as $tv)
+            <option value="{{ $tv->id }}" @if($veikejas->fk_tv_laida == $tv->id) selected="selected" @endif>{{ $tv->pavadinimas }}</option>
+        @endforeach     
+    </select><br><br>
+    
+        <label id="leb">Pasirinkite aktorių: </label>
+        <select class="dropdownlist" name="aktorius" id="aktorius">
 
             @foreach($aktoriai as $aktorius)
                 <option value="{{ $aktorius->id }}" @if($veikejas->fk_aktorius == $aktorius->id) selected="selected" @endif>{{ $aktorius->vardas }} {{ $aktorius->pavarde  }}</option>
             @endforeach
 
         </select><br><br>
+<center>
+    <input class="submit" type="submit" value="Pridėti">
+</center>
 
-
-        <input type="submit" value="Pridėti">
         
     </form>
-</center>
 
 @endsection
 

@@ -15,28 +15,38 @@
 </div>
 @endif
 
-<center>
-    <form action="{{ route('kurejai.update', $kurejas) }}" method="POST" style="background-color: antiquewhite">
-        @csrf
-        {{ method_field('PUT') }}
+<form action="{{ route('kurejai.update', $kurejas) }}" method="POST" class="form">
+    @csrf
+    {{ method_field('PUT') }}
+    <div class="inp">  
         <label >Vardas: </label>
-        <input type="text" name="vardas" value="{{ $kurejas->vardas }}"> <br><br>
+        <input class="textinput" type="text" name="vardas" value="{{ $kurejas->vardas }}"> <br><br>
+    </div>
+    
+    <div class="inp"> 
         
         <label >Pavardė:</label>
-        <input type="text" name="pavarde" value="{{ $kurejas->pavarde }}"> <br><br>
-
+        <input class="textinput" type="text" name="pavarde" value="{{ $kurejas->pavarde }}"> <br><br>
+    </div>
+    
+    <div class="inp">
+        
         <label >Rolė:</label>
-        <input type="text" name="role" value="{{ $kurejas->role }}"> <br><br>
-
+        <input class="textinput" type="text" name="role" value="{{ $kurejas->role }}"> <br><br>
+    </div>
+    <center>
+    <div class="inp">    
         <label >Lytis:</label> <br>
         <input type="radio" id="vyras" name="lytis" value="0" @if($kurejas->lytis == '0') checked="checked" @endif>
         <label for="vyras">Vyras</label><br>
         <input type="radio" id="moteris" name="lytis" value="1" @if($kurejas->lytis == '1') checked="checked" @endif>
         <label for="moteris">Moteris</label><br><br>
-
-        <label >Pasirinkite TV laidą: </label><br>
+    </div>
+    
+   
+    <label id="leb">Pasirinkite TV laidą: </label><br>
        
-        <select name="tvLaida[]" multiple id="tvLaida">
+        <select class="multiple" name="tvLaida[]" multiple id="tvLaida">
 
             @foreach($tvLaidos as $tv)
                 <option value="{{ $tv->id }}" @if(in_array($tv->id, $kuria)) selected="selected" @endif>{{ $tv->pavadinimas }}</option>
@@ -44,10 +54,10 @@
 
         </select><br><br>
 
-        <input type="submit" value="Pridėti">
+        <input class="submit" type="submit" value="Pridėti">
+    </center>
         
     </form>
-</center>
 
 @endsection
 

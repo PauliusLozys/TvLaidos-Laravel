@@ -15,26 +15,32 @@
 </div>
 @endif
 
-<center>
-    <form action="{{ route('aktoriai.update', $aktorius) }}" method="POST" style="background-color: antiquewhite">
-        @csrf
-        {{ method_field('PUT') }}
+<form action="{{ route('aktoriai.update', $aktorius) }}" method="POST"  class="form">
+    @csrf
+    {{ method_field('PUT') }}
+    <div class="inp">
         <label >Vardas: </label>
-        <input type="text" name="vardas" value="{{ $aktorius->vardas }}"> <br><br>
-        
+        <input class="textinput" type="text" name="vardas" value="{{ $aktorius->vardas }}"> <br><br>
+    </div>
+    
+    <div class="inp">
         <label >Pavardė:</label>
-        <input type="text" name="pavarde" value="{{ $aktorius->pavarde }}"> <br><br>
-
+        <input class="textinput" type="text" name="pavarde" value="{{ $aktorius->pavarde }}"> <br><br>
+    </div>
+    
+    <div class="inp">
         <label >Lytis:</label> <br>
         <input type="radio" id="vyras" name="lytis" value="0" @if($aktorius->lytis == '0') checked="checked" @endif>
         <label for="vyras">Vyras</label><br>
         <input type="radio" id="moteris" name="lytis" value="1" @if($aktorius->lytis == '1') checked="checked" @endif>
         <label for="moteris">Moteris</label><br><br>
-
-        <input type="submit" value="Pridėti">
+    </div>
+        
+    <center>
+        <input class="submit" type="submit" value="Pridėti">
+    </center>
         
     </form>
-</center>
 
 @endsection
 

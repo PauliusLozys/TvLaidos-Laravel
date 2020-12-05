@@ -15,27 +15,35 @@
 </div>
 @endif
 
-<center>
-    <form action="{{ route('kurejai.store') }}" method="POST" style="background-color: antiquewhite">
-        @csrf
+<form action="{{ route('kurejai.store') }}" method="POST" class="form">
+    @csrf
+    <div class='inp'>
         <label >Vardas: </label>
-        <input type="text" name="vardas" value="{{ old('vardas') }}"> <br><br>
-        
+        <input class="textinput" type="text" name="vardas" value="{{ old('vardas') }}"> <br><br>
+    </div>
+    
+    <div class='inp'>
         <label >Pavardė:</label>
-        <input type="text" name="pavarde" value="{{ old('pavarde') }}"> <br><br>
-
+        <input class="textinput" type="text" name="pavarde" value="{{ old('pavarde') }}"> <br><br>
+    </div>
+    
+    <div class='inp'>
         <label >Rolė:</label>
-        <input type="text" name="role" value="{{ old('role') }}"> <br><br>
-
+        <input class="textinput" type="text" name="role" value="{{ old('role') }}"> <br><br>
+    </div>
+    
+    <center>
+    <div class='inp'>
         <label >Lytis:</label> <br>
         <input type="radio" id="vyras" name="lytis" value="0" @if(old('lytis') == '0') checked="checked" @endif>
         <label for="vyras">Vyras</label><br>
         <input type="radio" id="moteris" name="lytis" value="1" @if(old('lytis') == '1') checked="checked" @endif>
         <label for="moteris">Moteris</label><br><br>
+    </div>
 
-        <label >Pasirinkite TV laidą: </label><br>
+        <label id="leb">Pasirinkite TV laidą: </label><br>
        
-        <select name="tvLaida[]" multiple id="tvLaida">
+        <select  class="multiple" name="tvLaida[]" multiple id="tvLaida">
 
             @foreach($tvLaidos as $tv)
                 <option value="{{ $tv->id }}" @if(old('tvLaida') == $tv->id) selected="selected" @endif>{{ $tv->pavadinimas }}</option>
@@ -43,10 +51,10 @@
 
         </select><br><br>
 
-        <input type="submit" value="Pridėti">
+        <input class="submit" type="submit" value="Pridėti">
+    </center>
         
     </form>
-</center>
 
 @endsection
 

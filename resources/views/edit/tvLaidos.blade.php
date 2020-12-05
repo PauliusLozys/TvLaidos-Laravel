@@ -14,37 +14,46 @@
     </ul>
 </div>
 @endif
-
-<center>
-    <form action="{{ route('tvLaidos.update', $tvLaida) }}" method="POST" style="background-color: antiquewhite">
+    <form action="{{ route('tvLaidos.update', $tvLaida) }}" method="POST" class="form">
         @csrf
         {{ method_field('PUT') }}
-        <label >Pavadinimas: </label>
-        <input type="text" name="pavadinimas" value="{{ $tvLaida->pavadinimas }}"> <br><br>
+        <div class="inp">
+            <label >Pavadinimas: </label>
+            <input class="textinput" type="text" name="pavadinimas" value="{{ $tvLaida->pavadinimas }}"> <br><br>
+        </div>
+
+        <div class="inp">
+            <label >Aprašymas:</label>
+            <textarea id="aprs" type="text" name="aprasymas"> {{ $tvLaida->aprasymas }}</textarea><br><br>
+        </div>
+            
+        <div class="inp">
+            <label >Trukmė:</label>    
+            <input class="textinput" type="number" name="trukme" value="{{ $tvLaida->trukme }}"> <br><br>
+        </div>
+
+        <div class="inp">
+
+            <label >Žiurovų įvertinimas:</label>
+            <input class="textinput" type="number" step="0.01" name="ivertinimas" value="{{ $tvLaida->ziurovu_ivertinimas }}"> <br><br><br>
+        </div>
         
-        <label >Aprašymas:</label>
-        <input type="text" name="aprasymas" value="{{ $tvLaida->aprasymas }}"> <br><br>
-
-        <label >Trukmė:</label>
-        <input type="number" name="trukme" value="{{ $tvLaida->trukme }}"> <br><br>
-
-        <label >Žiurovų įvertinimas:</label>
-        <input type="number" step="0.01" name="ivertinimas" value="{{ $tvLaida->ziurovu_ivertinimas }}"> <br><br>
-
-        <label >Pasirinkite kūrėja: </label><br>
-       
-        <select name="kurejai[]" multiple id="kurejai">
-
-            @foreach($kurejai as $kurejas)
+        
+        <center>
+            
+            <label id="leb">Pasirinkite kūrėja: </label><br>
+            <select class="multiple" name="kurejai[]" multiple id="kurejai">
+                
+                @foreach($kurejai as $kurejas)
                 <option value="{{ $kurejas->id }}" @if(in_array($kurejas->id, $kuria)) selected="selected" @endif>{{ $kurejas->vardas }} {{ $kurejas->pavarde }}</option>
-            @endforeach
+                @endforeach
+                
+            </select><br><br>
+            <input class="submit" type="submit" value="Pridėti" >
+        </center>
 
-        </select><br><br>
-
-        <input type="submit" value="Pridėti">
         
     </form>
-</center>
 
 @endsection
 

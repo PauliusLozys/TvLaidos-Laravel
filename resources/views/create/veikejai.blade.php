@@ -15,35 +15,37 @@
 </div>
 @endif
 
-<center>
-    <form action="{{ route('veikejai.store') }}" method="POST" style="background-color: antiquewhite">
-        @csrf
+<form action="{{ route('veikejai.store') }}" method="POST" class="form">
+    @csrf
+    <div class="inp">
         <label >Vardas: </label>
-        <input type="text" name="vardas" value="{{ old('vardas') }}"> <br><br>
+        <input class="textinput" type="text" name="vardas" value="{{ old('vardas') }}"> <br><br>
+    </div>
+    
+    <label id="leb">Pasirinkite TV laidą: </label>
+    <select class="dropdownlist" name="tvLaida" id="tvLaida">
         
-        <label >Pasirinkite TV laidą: </label>
-        <select name="tvLaida" id="tvLaida">
-
-            @foreach($tvLaidos as $tv)
-                <option value="{{ $tv->id }}" @if(old('tvLaida') == $tv->id) selected="selected" @endif>{{ $tv->pavadinimas }}</option>
-            @endforeach
-
-        </select><br><br>
-
-        <label >Pasirinkite aktorių: </label>
-        <select name="aktorius" id="aktorius">
-
-            @foreach($aktoriai as $aktorius)
-                <option value="{{ $aktorius->id }}" @if(old('aktorius') == $aktorius->id) selected="selected" @endif>{{ $aktorius->vardas }} {{ $aktorius->pavarde  }}</option>
-            @endforeach
-
-        </select><br><br>
-
-
-        <input type="submit" value="Pridėti">
+        @foreach($tvLaidos as $tv)
+        <option value="{{ $tv->id }}" @if(old('tvLaida') == $tv->id) selected="selected" @endif>{{ $tv->pavadinimas }}</option>
+        @endforeach
         
-    </form>
+    </select><br><br>
+    
+    <label id="leb">Pasirinkite aktorių: </label>
+    <select class="dropdownlist" name="aktorius" id="aktorius">
+        
+        @foreach($aktoriai as $aktorius)
+        <option value="{{ $aktorius->id }}" @if(old('aktorius') == $aktorius->id) selected="selected" @endif>{{ $aktorius->vardas }} {{ $aktorius->pavarde  }}</option>
+        @endforeach
+        
+    </select><br><br>
+    
+    
+<center>
+    <input class="submit" type="submit" value="Pridėti">
 </center>
+    
+</form>
 
 @endsection
 

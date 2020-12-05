@@ -243,3 +243,74 @@ table tr:nth-child(odd){
 table tr:hover{
     background-color: azure;
 }
+
+.multiple {
+    border-radius: 5px;
+    width: 20%;
+    height: 150px;
+}
+
+option {
+    text-align: center
+}
+
+.textinput {
+    padding: 5px;
+    float: right;
+    margin-right: 55%;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 100%;
+}
+
+.submit {
+    color: blue;
+    font-weight: bold;
+    height: 20px;
+    background-color:
+    darkgoldenrod; width: 100px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.submit:hover {
+background-color: #00ddb6;
+transition-duration: 1s;
+}
+
+#aprs {
+    width: 50%;
+    margin-left: 12%;
+    margin-top: 2%;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.inp > label, #leb{
+    color: white;
+    height: 0px;
+    font-weight: bold;
+    height: auto;
+}
+
+.inp:hover{
+    background-color: #00ddb6;
+    transition-duration: 1s;
+}
+.form {
+    background: linear-gradient(326deg, rgba(34,195,192,1) 9%, rgba(34,64,195,0.35056029247636555) 33%, rgba(4,3,0,1) 100%);
+}
+
+.dropdownlist {
+    float: right;
+    margin-right: 55%;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}

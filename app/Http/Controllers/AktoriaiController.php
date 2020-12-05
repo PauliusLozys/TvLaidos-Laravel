@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class AktoriaiController extends Controller
 {
     public function index() {
-        $all_aktoriai = Aktorius::paginate(2);
+        $all_aktoriai = Aktorius::paginate(5);
         return view('aktoriai', compact('all_aktoriai'));
     }
 
@@ -25,7 +25,8 @@ class AktoriaiController extends Controller
 
     public function edit($id)
     {
-        // return 'edit page';
+        $aktorius = Aktorius::findOrFail($id);
+        return view('edit.aktoriai')->with('aktorius', $aktorius);
     }
 
     public function update(Request $request, $id)
@@ -33,8 +34,10 @@ class AktoriaiController extends Controller
 
     }
 
-    public function destroy($id)
+    public function destroy($data)
     {
-        //
+        $obj = Aktorius::findOrFail($data);
+        $obj->delete();
+        return Redirect()->route('aktoriai');
     }
 }

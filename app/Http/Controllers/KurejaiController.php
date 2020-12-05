@@ -34,6 +34,8 @@ class KurejaiController extends Controller
 
     public function destroy($id)
     {
-        //
+        $obj = Kurejas::findOrFail($id);
+        $obj->delete();
+        return Redirect()->route('kurejai');
     }
 }

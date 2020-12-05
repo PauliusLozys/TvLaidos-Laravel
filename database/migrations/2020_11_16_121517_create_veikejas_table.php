@@ -19,7 +19,7 @@ class CreateVeikejasTable extends Migration
             $table->bigInteger('fk_aktorius')->unsigned();
             $table->bigInteger('fk_tv_laida')->unsigned();
 
-            $table->foreign('fk_aktorius')->references('id')->on('aktorius');
+            $table->foreign('fk_aktorius')->references('id')->on('aktorius')->onDelete('cascade');
             $table->foreign('fk_tv_laida')->references('id')->on('tv_laida')->onDelete('cascade');
         });
     }

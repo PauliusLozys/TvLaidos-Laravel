@@ -27,8 +27,14 @@
                 <td>{{$data->lytis ? 'Moteris' : 'Vyras'}}</td>
                 <td>
                     <center>
-                        <a href="#"><button>Redaguoti</button></a>
-                        <a href="#"><button>Šalinti</button></a>
+                        <a href="{{ route('aktoriai.edit', $data) }}">
+                            <button type="button" class="btn btn-primary">Redaguoti</button>
+                        </a>
+                        <form action="{{ route('aktoriai.destroy', $data) }}" method="POST" class="float-left">
+                            @csrf
+                            {{method_field('DELETE')}}
+                            <button type="submit" class="btn btn-warning">Šalinti</button>
+                        </form>
                     </center>
                 </td>
             </tr>

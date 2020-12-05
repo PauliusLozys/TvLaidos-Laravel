@@ -34,6 +34,8 @@ class VeikejaiController extends Controller
 
     public function destroy($id)
     {
-        //
+        $obj = Veikejas::findOrFail($id);
+        $obj->delete();
+        return Redirect()->route('veikejai');
     }
 }

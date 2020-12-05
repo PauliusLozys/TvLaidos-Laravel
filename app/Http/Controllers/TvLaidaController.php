@@ -34,6 +34,8 @@ class TvLaidaController extends Controller
 
     public function destroy($id)
     {
-        //
+        $obj = TvLaida::findOrFail($id);
+        $obj->delete();
+        return Redirect()->route('tvLaidos');
     }
 }

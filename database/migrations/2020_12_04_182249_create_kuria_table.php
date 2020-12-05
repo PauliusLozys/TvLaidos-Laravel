@@ -14,6 +14,7 @@ class CreateKuriaTable extends Migration
     public function up()
     {
         Schema::create('kuria', function (Blueprint $table) {
+            $table->id();
             $table->bigInteger('fk_tv_laida')->unsigned();
             $table->bigInteger('fk_kurejas')->unsigned();
 

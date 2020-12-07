@@ -25,8 +25,8 @@ class TvLaidaController extends Controller
         $data = $request->validate([
             'pavadinimas' => 'required|max:255',
             'aprasymas' => 'required|max:255',
-            'trukme' => 'required|numeric',
-            'ivertinimas' => 'required|numeric',
+            'trukme' => 'required|numeric|min:1',
+            'ivertinimas' => 'required|numeric|between:1,10',
             'kurejai' => Rule::requiredIf($request->kurejai == null)
         ]);
 

@@ -21,9 +21,9 @@ class SezonaiController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'sezonoNr' => 'required|numeric',
+            'sezonoNr' => 'required|numeric|min:1',
             'sezonoIvertis' => 'required|between:1,10|numeric',
-            'epizoduNr' => 'required|numeric',
+            'epizoduNr' => 'required|numeric|min:1',
             'tvLaida' => 'required'
         ]);
 

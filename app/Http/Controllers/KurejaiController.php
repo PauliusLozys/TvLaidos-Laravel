@@ -23,9 +23,9 @@ class KurejaiController extends Controller
     {
         // dd($request);
         $data = $request->validate([
-            'role' => 'required',
             'vardas' => 'required|max:255|alpha',
             'pavarde' => 'required|max:255|alpha',
+            'role' => 'required|max:255',
             'lytis' => 'required'
         ]);
 

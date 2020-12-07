@@ -12,7 +12,7 @@
             <th>Sezono nr</th>
             <th>Sezono įvertinimas</th>
             <th>Epizodu skaičius</th>
-            <th>Tv Laida ID</th>
+            <th>Tv Laida</th>
             <th>Veiksmai</th>
 
         </tr>

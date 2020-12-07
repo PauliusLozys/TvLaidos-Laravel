@@ -24,7 +24,6 @@ class VeikejaiController extends Controller
     public function store(Request $request)
     {
 
-        // dd($request);
         $data = $request->validate([
             'vardas' => 'required',
             'tvLaida' => 'required',
@@ -51,7 +50,6 @@ class VeikejaiController extends Controller
 
     public function update(Request $request, $id)
     {
-        // dd($request);
         $data = $request->validate([
             'vardas' => 'required',
             'tvLaida' => 'required',

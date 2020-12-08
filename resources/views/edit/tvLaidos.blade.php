@@ -24,7 +24,7 @@
 
         <div class="inp">
             <label >Aprašymas:</label>
-            <textarea id="aprs" type="text" name="aprasymas"> {{ $tvLaida->aprasymas }}</textarea><br><br>
+            <textarea id="aprs" type="text" name="aprasymas">{{ $tvLaida->aprasymas }}</textarea><br><br>
         </div>
             
         <div class="inp">

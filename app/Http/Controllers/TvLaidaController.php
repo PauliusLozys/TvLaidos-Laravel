@@ -22,8 +22,9 @@ class TvLaidaController extends Controller
 
     public function store(Request $request)
     {
+
         $data = $request->validate([
-            'pavadinimas' => 'required|max:255',
+            'pavadinimas' => ['required','max:255', Rule::notIn(['negaliu','gintis','lab4'])],
             'aprasymas' => 'required|max:255',
             'trukme' => 'required|numeric|min:1',
             'ivertinimas' => 'required|numeric|between:1,10',

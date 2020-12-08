@@ -26,7 +26,7 @@
         
         <div  class="inp">
             <label >Aprašymas:</label>
-            <textarea id="aprs" type="text" name="aprasymas" value="{{ old('aprasymas') }}"> </textarea><br><br>
+            <textarea id="aprs" type="text" name="aprasymas">{{ old('aprasymas') }}</textarea><br><br>
         </div>
 
         <div  class="inp">
